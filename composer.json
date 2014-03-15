@@ -24,8 +24,14 @@
         "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
     },
     "scripts": {
-        "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-        "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-update-cmd": [
+            "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+            "patch -p1 -N -t -i Build/Patches/flow-2.1.x.patch"
+        ],
+        "post-install-cmd": [
+            "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+            "patch -p1 -N -t -i Build/Patches/flow-2.1.x.patch"
+        ],
         "post-package-update":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "post-package-install":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
     }
