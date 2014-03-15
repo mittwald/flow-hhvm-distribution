@@ -7,8 +7,8 @@
         "bin-dir": "bin"
     },
     "require": {
-        "typo3/flow": "dev-master",
-        "typo3/welcome": "dev-master",
+        "typo3/flow": "2.2.*@dev",
+        "typo3/welcome": "2.2.*@dev",
         "typo3/fluid": "@dev",
         "typo3/party": "@dev",
         "typo3/eel": "@dev",
