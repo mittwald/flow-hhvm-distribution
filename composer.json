@@ -1,6 +1,6 @@
 {
-    "name": "typo3/flow-base-distribution",
-    "description" : "TYPO3 Flow Base Distribution",
+    "name": "mittwald/flow-hhvm-distribution",
+    "description" : "TYPO3 Flow Base Distribution (with HHVM patches)",
     "license": "LGPL-3.0+",
     "config": {
         "vendor-dir": "Packages/Libraries",
@@ -26,11 +26,11 @@
     "scripts": {
         "post-update-cmd": [
             "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-            "patch -p1 -N -t -i Build/Patches/flow-2.1.x.patch"
+            "patch -p1 -N -t -i Build/Patches/flow-2.2.x.patch"
         ],
         "post-install-cmd": [
             "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
-            "patch -p1 -N -t -i Build/Patches/flow-2.1.x.patch"
+            "patch -p1 -N -t -i Build/Patches/flow-2.2.x.patch"
         ],
         "post-package-update":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "post-package-install":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
