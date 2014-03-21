@@ -1,5 +1,5 @@
 {
-    "name": "mittwald/flow-hhvm-distribution",
+    "name": "mittwald-typo3/flow-hhvm-distribution",
     "description" : "TYPO3 Flow Base Distribution (with HHVM patches)",
     "license": "LGPL-3.0+",
     "config": {
